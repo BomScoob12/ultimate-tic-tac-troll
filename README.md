@@ -1,7 +1,3 @@
-Sure! Here's a README template for your **Ultimate Tic-Tac-Troll** project:
-
----
-
 # Ultimate Tic-Tac-Troll
 
 Welcome to **Ultimate Tic-Tac-Troll**! This project is a fun and challenging twist on the classic Tic-Tac-Toe game, designed to provide a unique and engaging experience. 
