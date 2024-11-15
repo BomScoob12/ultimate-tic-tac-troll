@@ -16,7 +16,7 @@ Welcome to **Ultimate Tic-Tac-Troll**! This project is a fun and challenging twi
 **Ultimate Tic-Tac-Troll** takes the beloved game of Tic-Tac-Toe and adds a new layer of strategy and fun. Whether you're playing against a friend or challenging an AI opponent, get ready for a game that will test your wits and provide hours of entertainment.
 
 ## Features
-
+### Planing
 - **Multiple Game Modes**: Play against friends or challenge an AI.
 - **Unique Twists**: Special troll moves that can change the course of the game.
 - **Customizable Boards**: Different board sizes and themes to choose from.
