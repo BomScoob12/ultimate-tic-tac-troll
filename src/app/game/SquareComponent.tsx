@@ -16,7 +16,7 @@ export default function Square({ cellValue, handleClick }: SquareProps) {
         onClick={handleClick}
         id={cellValue.id}
       >
-        {cellValue.id} - {cellValue.value}
+        id: {cellValue.id} value: {cellValue.value}
       </button>
     </div>
   );
