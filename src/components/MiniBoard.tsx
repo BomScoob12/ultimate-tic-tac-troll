@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Square from './Square';
+import Square from '@/components/Square';
 import { MiniBoardController } from '@/core/controllers/MiniBoardController';
 
 interface MiniBoardProps {
