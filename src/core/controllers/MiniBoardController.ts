@@ -10,7 +10,6 @@ export class MiniBoardController {
   }
 
   getMiniBoardState() {
-    console.log('get mini board state');
     return this.miniBoardState;
   }
 
