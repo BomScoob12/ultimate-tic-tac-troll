@@ -24,17 +24,28 @@ export class MiniBoardController {
   }
 
   handleClickCell(cellId: string) {
-    const cell = this.miniBoardState.cells.find((cell) => cell.id === cellId);
+    const idxTarget = this.miniBoardState.cells.findIndex(
+      (cell) => cell.id === cellId
+    );
+    const targetCell = this.miniBoardState.cells[idxTarget];
 
     // cell exists and value is empty and miniBoard is playable
-    if (cell && !cell.value && this.miniBoardState.isPlayable) {
-      cell.value = this.isXTurn ? 'X' : 'O';
+    if (targetCell && !targetCell.value && this.miniBoardState.isPlayable) {
+      targetCell.value = this.isXTurn ? 'X' : 'O';
       this.isXTurn = !this.isXTurn;
-      this.calculateWinner();
 
-      console.log(this.miniBoardState);
+      // update cell
+      this.miniBoardState.cells.splice(idxTarget, 1, targetCell);
+
+      this.calculateWinner();
     } else {
+      if (!targetCell) {
         throw new Error('Invalid move');
+      } else if (targetCell.value) {
+        throw new Error('Cell already filled');
+      } else {
+        throw new Error('Mini board is not playable');
+      }
     }
   }
 
@@ -59,6 +70,7 @@ export class MiniBoardController {
         cells[a].value === cells[c].value
       ) {
         this.setMiniBoardWinner(cells[a].value);
+        console.log('winner is', cells[a].value);
         return cells[a].value;
       }
     }
