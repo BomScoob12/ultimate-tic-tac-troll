@@ -4,12 +4,11 @@ import { useState } from 'react';
 import Square from './Square';
 import { MiniBoardController } from '@/core/controllers/MiniBoardController';
 
-interface BoardProps {
+interface MiniBoardProps {
   miniBoardController: MiniBoardController;
 }
 
-export default function Board({ miniBoardController }: BoardProps) {
-
+export default function MiniBoard({ miniBoardController }: MiniBoardProps) {
   const [miniBoardState, setMiniBoardState] = useState(
     miniBoardController.getMiniBoardState()
   );
@@ -19,11 +18,10 @@ export default function Board({ miniBoardController }: BoardProps) {
     try {
       miniBoardController.handleClickCell(target.id);
     } catch (error) {
-      console.log(error);
+      console.warn(error);
     }
 
     // update state with new object of state
-    console.log('update state');
     setMiniBoardState({
       ...miniBoardController.getMiniBoardState(),
     });
